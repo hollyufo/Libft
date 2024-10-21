@@ -9,8 +9,6 @@
 - [Mandatory Part](#mandatory-part)
   - [Libc Functions](#libc-functions)
   - [Additional Functions](#additional-functions)
-- [Bonus Part](#bonus-part)
-- [Submission and Evaluation](#submission-and-evaluation)
 
 ## Introduction
 The **Libft** project is designed to give you hands-on experience with C programming by building a foundational library. You will replicate a set of functions from the C Standard Library (libc) and implement additional utility functions.
@@ -36,20 +34,3 @@ The project starts with implementing several libc functions, each beginning with
 In this section, additional utility functions are implemented:
 - `ft_substr`, `ft_strjoin`, `ft_strtrim`
 - `ft_split`, `ft_itoa`, `ft_strmapi`, etc.
-
-## Bonus Part
-The bonus part involves implementing linked list functions, which include creating new nodes, adding/removing nodes, and iterating over lists. The bonus part is only evaluated if the mandatory part is completed perfectly.
-
-## Submission and Evaluation
-All submissions must be done through the assigned Git repository. Only the work present in the repository will be graded. Make sure all files are placed at the root of the repository.
-
-## Getting Started
-### Prerequisites
-- GCC or any C compiler
-- Git for version control
-
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository_url>
-   cd libft
