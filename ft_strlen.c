@@ -6,20 +6,21 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:56:25 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/22 13:58:01 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:12:20 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 
-int ft_strlen(char *str)
+size_t ft_strlen(const char *str)
 {
-    int i;
+    size_t i;
 
     i = 0;
     while(str[i] != '\0')
     {
         i++;
     }
-    return i;
+    return (i);
 }
