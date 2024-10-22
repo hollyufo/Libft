@@ -6,11 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:41:52 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/22 13:43:04 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/10/22 13:53:49 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unisted.h>
+#include <unistd.h>
 
 int ft_isascii(int c)
 {
