@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 13:56:25 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/24 15:45:03 by imchaibi         ###   ########.fr       */
+/*   Created: 2024/10/24 15:45:05 by imchaibi          #+#    #+#             */
+/*   Updated: 2024/10/25 13:20:34 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-size_t ft_strlen(const char *str)
+char *ft_strchr(const char *s, int c)
 {
-    size_t i;
+    int i;
+    char char_to_find;
 
+    char_to_find = (char) c;
     i = 0;
-    while(str[i] != '\0')
+    
+    while(s[i])
     {
+        if(s[i] == char_to_find)
+        {
+            return ((char *) &s[i]);
+        }
         i++;
     }
-    return (i);
+    if (s[i] == char_to_find)
+    {
+        return ((char *) &s[i])
+    }
+    return (NULL);
 }
