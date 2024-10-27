@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 11:48:16 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 12:53:17 by imchaibi         ###   ########.fr       */
+/*   Created: 2024/10/27 12:50:18 by imchaibi          #+#    #+#             */
+/*   Updated: 2024/10/27 12:55:21 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 size_t ft_strlen(const char *str);
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+
+char *ft_strdup(const char *src)
 {
-    size_t i;
-    size_t src_len;
+    size_t len = ft_strlen(src);
+    char *dub = (char *)malloc((len + 1) * sizeof(char));
 
-    src_len = ft_strlen(src);
-    i = 0;
-
-    if (dstsize > 0)
+    if (dub == NULL)
     {
-        // Copy up to dstsize - 1 characters from src to dst
-        while (i < dstsize - 1 && src[i] != '\0')
-        {
-            dst[i] = src[i];
-            i++;
-        }
-        // Null-terminate the destination string
-        dst[i] = '\0';
+        return NULL;
     }
 
-    return src_len;  // Return the length of the source string
+    ft_strlcpy(dub, src, len + 1);
+    return dub;
 }

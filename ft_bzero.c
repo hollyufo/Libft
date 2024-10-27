@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:44:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:49:15 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:02:49 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 
 void ft_bzero(void *s, size_t n)
 {
-        unsigned char *p = (unsigned char *)s;
-    
+    unsigned char *p = (unsigned char *)s;
     size_t i;
 
     i = 0;

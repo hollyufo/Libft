@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 14:17:09 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 13:03:59 by imchaibi         ###   ########.fr       */
+/*   Created: 2024/10/26 17:55:22 by imchaibi          #+#    #+#             */
+/*   Updated: 2024/10/27 12:46:59 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 
-void ft_bzero(void *s, size_t n);
-
-void *ft_calloc(size_t count, size_t size)
+size_t ft_strlen(const char *str)
 {
-    void *temp_str;
-    size_t total_size;
+    size_t i;
 
+    i = 0;
+    while(str[i] != '\0')
+    {
+        i++;
+    }
+    return (i);
+}
+
+char *ft_substr(const char *s, unsigned int start, size_t len)
+{
+    size_t i;
+    char *str;
     
-    if (count == 0 || size == 0)
+    if(!s)
     {
-        return malloc(0);
+        return (NULL);
     }
-    // checking over flow
-    if (count > SIZE_MAX / size)
+    if(ft_strlen(s) > start)
     {
-        return NULL; 
+        
     }
-
-    total_size = count * size;
-    temp_str = malloc(total_size);
-
-    if (!temp_str)
-    {
-        return NULL;
-    }
-
-    ft_bzero(temp_str, total_size);
-
-    return temp_str;
 }
