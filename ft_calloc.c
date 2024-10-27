@@ -6,12 +6,13 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:17:09 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 13:03:59 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:45:18 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 void ft_bzero(void *s, size_t n);
 
