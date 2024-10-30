@@ -158,7 +158,7 @@ int main(void)
     test_ft_strjoin("42", "Network", "42Network");
     test_ft_strjoin(NULL, "Hello", "Hello");  // NULL input
     test_ft_strjoin("Hello", NULL, "Hello");  // NULL input
-    test_ft_strjoin(NULL, NULL, "");          // Both NULL inputs
+    test_ft_strjoin(NULL, NULL, "");          // Both NULL
 
     return 0;
 }
