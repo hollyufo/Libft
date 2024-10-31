@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: imchaibi <imchaibi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:50:18 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 13:28:58 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:10:13 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t ft_strlen(const char *str);
 
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 void *ft_calloc(size_t count, size_t size);
 
