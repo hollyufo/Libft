@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:22:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/31 13:28:06 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/10/31 13:30:29 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
+
 
 
 static int is_in_set(char c, const char *set)
