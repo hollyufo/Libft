@@ -46,28 +46,20 @@ void *ft_strtrim(char const *s1, char const *set)
     size_t start = 0;
     size_t end = ft_strlen(s1) - 1;
     size_t i;
-    printf("the len is %li \n", end);
+    char *substr;
     
     while(s1[start] && is_in_set(s1[start], set))
     {
-        printf("start index is %c\n", s1[start]);
         start++;
     }
     i = start;
     while (end >= start && is_in_set(s1[end], set))
     {
-        printf(" end index is %c\n", s1[end]);
         end--;
     }
-    printf("start is %li \n", start);
-    printf("end is %li \n", end);
-    while (i >= end)
-    {
-        printf("end is %c \n", s1[i]);
-        i++;
-    }
-    printf("\n");
-    return 0;
+    substr = ft_substr(s1,start, end);
+
+    return (substr);
 }
 
 int main()
