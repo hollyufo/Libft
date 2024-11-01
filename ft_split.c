@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:44:17 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/31 14:16:58 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:52:28 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
-void *ft_memset(void *s, int c, size_t n)
-{
-    unsigned char *p = (unsigned char *)s;
-    
-    size_t i;
 
-    i = 0;
-    while (i < n)
-    {
-        p[i] = c;
-        i++;
-    }
-    
-    return s;
-}
-
-void ft_bzero(void *s, size_t n)
-{
-    ft_memset(s, 0, n);
-}
-int count_words(const char *str, char delimiter)
+static int count_words(const char *str, char delimiter)
 {
     int count = 0;
     int in_word = 0;
@@ -59,37 +40,8 @@ int count_words(const char *str, char delimiter)
 
     return count;
 }
-void ft_bzero(void *s, size_t n);
 
-void *ft_calloc(size_t count, size_t size)
-{
-    void *temp_str;
-    size_t total_size;
 
-    
-    if (count == 0 || size == 0)
-    {
-        return malloc(0);
-    }
-    // checking over flow
-    if (count > SIZE_MAX / size)
-    {
-        return NULL; 
-    }
-
-    total_size = count * size;
-    temp_str = malloc(total_size);
-
-    if (!temp_str)
-    {
-        return NULL;
-    }
-
-    ft_bzero(temp_str, total_size);
-
-    return temp_str;
-}
-// Allocate memory for each word
 static char *allocate_word(const char *s, char c)
 {
     int len = 0;
@@ -151,54 +103,4 @@ char **ft_split(const char *s, char c)
         }
     }
     return result;
-}
-
-// Custom free function to free the split array
-void ft_free_split(char **arr)
-{
-    if (!arr)
-        return;
-
-    int i = 0;
-    while (arr[i])
-    {
-        free(arr[i]);
-        i++;
-    }
-    free(arr);
-}
-
-// Test function
-void test_ft_split(const char *str, char delimiter)
-{
-    char **result = ft_split(str, delimiter);
-    if (!result)
-    {
-        printf("Memory allocation failed or NULL input\n");
-        return;
-    }
-
-    int i = 0;
-    while (result[i])
-    {
-        printf("Word %d: '%s'\n", i, result[i]);
-        free(result[i]);
-        i++;
-    }
-    free(result);
-}
-
-int main()
-{
-    // Edge case tests
-    test_ft_split(NULL, ' '); // NULL input
-    test_ft_split("", ' '); // Empty string
-    test_ft_split(",,,,", ','); // Only delimiters
-    test_ft_split("Hello", ' '); // Single word, no delimiters
-    test_ft_split("H", 'H'); // Single character matching delimiter
-    test_ft_split("A", ' '); // Single character, non-matching delimiter
-    test_ft_split("Hello World", ' '); // Regular split
-    test_ft_split(",,,Hello,,,World,,,", ','); // Leading, trailing, and consecutive delimiters
-    
-    return 0;
 }
