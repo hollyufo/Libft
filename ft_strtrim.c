@@ -46,11 +46,10 @@ void *ft_strtrim(char const *s1, char const *set)
     {
         end--;
     }
-    // If start is beyond end, return an empty string
+    
     if (start > end)
         return ft_calloc(1, sizeof(char));
 
-    // Use ft_substr to get the trimmed substring
     trimmed_str = ft_substr(s1, start, end - start + 1);
     return trimmed_str;
 }
