@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:22:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 14:34:48 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:34:47 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int is_in_set(char c, const char *set)
     return (0);
 }
 
-void *ft_strtrim(char const *s1, char const *set)
+char *ft_strtrim(const char *s1, const char *set)
 {
     size_t start = 0;
     size_t end = ft_strlen(s1) - 1;

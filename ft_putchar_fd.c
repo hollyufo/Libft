@@ -6,10 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:09:48 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 15:12:51 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:35:26 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 void ft_putchar_fd(char c, int fd)
 {
