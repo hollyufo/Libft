@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imchaibi <imchaibi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:44:17 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/01 11:52:28 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:34:00 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdio.h>
-
+#include "libft.h"
 
 static int count_words(const char *str, char delimiter)
 {

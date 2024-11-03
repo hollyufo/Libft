@@ -6,14 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 12:50:08 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/02 13:42:02 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:33:39 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
+#include "libft.h"
 
 static int countDigit(long long num)
 {

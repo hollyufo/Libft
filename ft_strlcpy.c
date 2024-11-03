@@ -6,12 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 11:48:16 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 18:07:21 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:34:23 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <string.h>
+#include "libft.h"
 
 size_t ft_strlen(const char *str);
 

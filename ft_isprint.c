@@ -6,13 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:52:38 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:50:21 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:33:36 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isprint(int c)
 {

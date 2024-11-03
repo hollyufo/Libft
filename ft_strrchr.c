@@ -6,11 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:22:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:52:23 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:34:42 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c) {
     char char_to_find = (char)c;

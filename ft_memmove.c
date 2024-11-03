@@ -6,14 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 17:05:55 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:50:52 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:33:50 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void    *ft_memmove(void *dst, const void *src, size_t len)
 {

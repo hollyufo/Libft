@@ -6,13 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:05:24 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:50:28 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:33:41 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void *ft_memchr(const void *s, int c, size_t n)
 {

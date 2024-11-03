@@ -6,15 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:17:09 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 14:45:18 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:33:10 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdint.h>
-
-void ft_bzero(void *s, size_t n);
+#include "libft.h"
 
 void *ft_calloc(size_t count, size_t size)
 {

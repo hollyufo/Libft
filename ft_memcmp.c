@@ -6,13 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:47:16 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:50:35 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:33:45 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {

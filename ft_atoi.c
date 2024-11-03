@@ -6,13 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:52:54 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:49:00 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:32:51 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 static int    ft_isspace(int c)
 {

@@ -6,19 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 17:55:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/27 15:18:35 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:34:57 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-char *ft_strdup(const char *src);
-
-size_t ft_strlen(const char *str);
-
-void *ft_calloc(size_t count, size_t size);
-
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+#include "libft.h"
 
 char *ft_substr(const char *s, unsigned int start, size_t len)
 {

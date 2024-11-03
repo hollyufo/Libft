@@ -6,13 +6,11 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:45:05 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/10/26 17:51:07 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:34:03 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {

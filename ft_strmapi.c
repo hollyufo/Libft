@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 13:36:09 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 14:33:21 by imchaibi         ###   ########.fr       */
+/*   Created: 2024/11/02 13:45:29 by imchaibi          #+#    #+#             */
+/*   Updated: 2024/11/03 14:34:33 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int ft_isalpha(int c)
+char *ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-    {
-        return (1);
-    }
-    return (0);
+    
 }
-
