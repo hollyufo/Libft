@@ -6,17 +6,17 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:52:54 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 14:32:51 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 17:49:19 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int    ft_isspace(int c)
+static	int	ft_isspace(int c)
 {
-    if (c == ' ' || (c >= 9 && c <= 13))
-        return (1);
-    return (0);
+	if (c == ' ' || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
 }
 
 int	ft_atoi(const char *str)

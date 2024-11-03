@@ -6,59 +6,62 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:44:17 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 14:34:00 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:35:16 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int count_words(const char *str, char delimiter)
+static int	count_words(const char *str, char delimiter)
 {
-    int count = 0;
-    int in_word = 0;
+	int	count;
+	int	in_word;
 
-    while (*str)
-    {
-        if (*str != delimiter)
-        {
-            if (!in_word)
-            {
-                in_word = 1;
-                count++;
-            }
-        }
-        else
-        {
-            in_word = 0;
-        }
-        str++;
-    }
-
-    return count;
+	in_word = 0;
+	count = 0;
+	while (*str)
+	{
+		if (*str != delimiter)
+		{
+			if (!in_word)
+			{
+				in_word = 1;
+				count++;
+			}
+		}
+		else
+		{
+			in_word = 0;
+		}
+		str++;
+	}
+	return (count);
 }
 
-
-static char *allocate_word(const char *s, char c)
+static char	*allocate_word(const char *s, char c)
 {
-    int len = 0;
-    while (s[len] && s[len] != c)
-        len++;
-    
-    char *word = (char *)ft_calloc(len + 1, sizeof(char)); // Using `ft_calloc`
-    if (!word)
-        return NULL;
-    
-    for (int i = 0; i < len; i++)
-        word[i] = s[i];
-    
-    return word;
+	int		len;
+	char	*word;
+	int		i;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	word = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!word)
+		return (NULL);
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	return (word);
 }
 
-// Split function
 char **ft_split(const char *s, char c)
 {
     if (!s)
-        return NULL; // NULL input returns NULL
+        return NULL;
 
     int word_count = count_words(s, c);
     

@@ -6,13 +6,13 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:52:38 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 14:33:36 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:02:09 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{

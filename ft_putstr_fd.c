@@ -6,20 +6,22 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:26:50 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 15:27:12 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:28:24 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (!s)
-        return;
+	size_t	i;
 
-    size_t i = 0;
-    while (s[i])
-        i++;
-
-    write(fd, s, i);
+	if (!s)
+	{
+		return ;
+	}
+	i = 0;
+	while (s[i])
+		i++;
+	write(fd, s, i);
 }

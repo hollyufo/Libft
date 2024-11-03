@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:28:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/03 15:29:55 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:27:18 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int fd, int nb)
 	num = nb;
 	if (num < 0)
 	{
-		ft_putchar_fd(fd,'-');
+		ft_putchar_fd(fd, '-');
 		num = -num;
 	}
 	if (num >= 10)
