@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hollyufo <hollyufo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 12:50:08 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/06 14:39:34 by hollyufo         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:42:03 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 
 static int	count_digit(long long num)
 {
-	int	count = 0;
+	int	count;
 
+	count = 0;
 	if (num == 0)
 		return (1);
 	if (num < 0)
@@ -40,28 +41,34 @@ static void	fill_number_str(char *str, long long num, int len)
 		str[--len] = (num % 10) + '0';
 		num /= 10;
 	}
-	if (len == 1) // This ensures zero for cases like -2147483648
+	if (len == 1)
 		str[0] = '0';
 }
 
 char	*ft_itoa(int n)
 {
-	long long	num = n; // Use a long long to handle edge cases
+	long long	num;
 	int			len;
 	char		*str;
+	int			isnegative;
 
-	len = count_digit(num) + (n < 0 ? 1 : 0);
+	num = n;
+	isnegative = 0;
+	if (n < 0)
+		isnegative = 1;
+	len = count_digit(num) + isnegative;
 	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-
 	if (num == 0)
 	{
 		str[0] = '0';
 		return (str);
 	}
 	fill_number_str(str, num, len);
-	if (n < 0)
+	if (isnegative)
+	{
 		str[0] = '-';
+	}
 	return (str);
 }
