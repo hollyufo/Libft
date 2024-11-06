@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hollyufo <hollyufo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:44:17 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/06 14:38:39 by hollyufo         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:45:21 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 static int	count_words(const char *str, char delimiter)
 {
-	int	count = 0;
-	int	in_word = 0;
+	int	count;
+	int	in_word;
 
+	count = 0;
+	in_word = 0;
 	while (*str)
 	{
 		if (*str != delimiter && !in_word)
@@ -33,18 +35,17 @@ static int	count_words(const char *str, char delimiter)
 
 static char	*allocate_word(const char *s, char c)
 {
-	int		len = 0;
+	int		len ;
 	char	*word;
-	int		i = 0;
+	int		i;
 
-	// Find the length of the word
+	len = 0;
+	i = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	// Allocate memory for the word
 	word = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!word)
 		return (NULL);
-	// Copy the word into the allocated space
 	while (i < len)
 	{
 		word[i] = s[i];
@@ -66,31 +67,26 @@ char	**ft_split(const char *s, char c)
 {
 	int		word_count;
 	char	**result;
-	int		i = 0;
+	int		i;
 
+	i = 0;
 	if (!s)
 		return (NULL);
-
 	word_count = count_words(s, c);
-	// Allocate memory for the result array, with an extra slot for NULL termination
 	result = (char **)ft_calloc(word_count + 1, sizeof(char *));
 	if (!result)
 		return (NULL);
-
 	while (i < word_count)
 	{
-		// Skip delimiters to the start of the next word
 		while (*s == c)
 			s++;
-		// Allocate and copy the word into the result array
 		result[i] = allocate_word(s, c);
 		if (!result[i])
-			return (free_split(result, i)); // Free everything if allocation fails
-		// Move the pointer to the end of the current word
+			return (free_split(result, i));
 		while (*s && *s != c)
 			s++;
 		i++;
 	}
-	result[i] = NULL; // NULL terminate the array
+	result[i] = NULL;
 	return (result);
 }
