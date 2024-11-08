@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 13:22:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/08 18:09:41 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:12:27 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	end;
 	char	*trimmed_str;
 
-	if (!s1 || !set)
-		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
 	while (s1[start] && is_in_set(s1[start], set))
