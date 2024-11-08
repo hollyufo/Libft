@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 17:55:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/04 13:57:55 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:02:24 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	str_len = ft_strlen(s);
 	if (start >= str_len)
 	{
-		return (ft_calloc(1, sizeof(char)));
+		return ((char *)ft_calloc(1, sizeof(char)));
 	}
 	if (str_len - start < len)
 		sub_len = str_len - start;
