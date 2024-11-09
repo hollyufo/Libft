@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:13:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/09 16:09:21 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:11:37 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 	size_t	space_left;
-	
+
 	if (!dst || !src)
 		return (0);
 	dst_len = 0;

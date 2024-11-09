@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:50:18 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/09 16:09:28 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:11:21 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *src)
 {
 	size_t	len;
 	char	*dub;
-	
+
 	if (src == NULL)
 	{
 		dub = (char *)ft_calloc(1, sizeof(char));
