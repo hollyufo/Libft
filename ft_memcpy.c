@@ -6,7 +6,7 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:19:20 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/07 15:43:56 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:05:01 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 	{
-	unsigned char	*temp_dst;
-	unsigned char	*temp_src;
+	unsigned char		*temp_dst;
+	const unsigned char	*temp_src;
 
 	if (!dst || !src)
 	{
-		return (dst);
+		return (NULL);
 	}
 	temp_dst = (unsigned char *)dst;
 	temp_src = (unsigned char *)src;
