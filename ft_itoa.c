@@ -6,11 +6,9 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 12:50:08 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/06 15:42:03 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/10 23:41:00 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
