@@ -6,11 +6,25 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 17:55:22 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/08 18:02:24 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/10 23:37:52 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	p_strlen(const char *str)
+{
+	size_t	len;
+
+	if (str == NULL)
+		return (0);
+	len = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -22,7 +36,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-	str_len = ft_strlen(s);
+	str_len = p_strlen(s);
 	if (start >= str_len)
 	{
 		return ((char *)ft_calloc(1, sizeof(char)));

@@ -6,11 +6,25 @@
 /*   By: imchaibi <imchaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:50:18 by imchaibi          #+#    #+#             */
-/*   Updated: 2024/11/09 16:11:21 by imchaibi         ###   ########.fr       */
+/*   Updated: 2024/11/10 23:36:51 by imchaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	p_strlen(const char *str)
+{
+	size_t	len;
+
+	if (str == NULL)
+		return (0);
+	len = 0;
+	while (str[len])
+	{
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_strdup(const char *src)
 {
@@ -24,7 +38,7 @@ char	*ft_strdup(const char *src)
 			return (NULL);
 		return (dub);
 	}
-	len = ft_strlen(src);
+	len = p_strlen(src);
 	dub = (char *)ft_calloc(len + 1, sizeof(char));
 	if (dub == NULL)
 	{
