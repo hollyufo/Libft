@@ -28,13 +28,14 @@ static int	is_in_set(char c, const char *set)
 	return (0);
 }
 
-
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	start;
 	size_t	end;
 	char	*trimmed_str;
 
+	if (!s1 || !set)
+		return ((char *)ft_calloc(1, sizeof(char)));
 	start = 0;
 	end = ft_strlen(s1) -1;
 	while (s1[start] && is_in_set(s1[start], set))

@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 char	*ft_strdup(const char *src)
 {
 	size_t	len;
