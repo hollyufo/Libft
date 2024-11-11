@@ -12,20 +12,6 @@
 
 #include "libft.h"
 
-static size_t	p_strlen(const char *str)
-{
-	size_t	len;
-
-	if (str == NULL)
-		return (0);
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}
-
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t	str_len;
@@ -36,7 +22,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-	str_len = p_strlen(s);
+	str_len = ft_strlen(s);
 	if (start >= str_len)
 	{
 		return ((char *)ft_calloc(1, sizeof(char)));

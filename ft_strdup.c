@@ -12,19 +12,6 @@
 
 #include "libft.h"
 
-static size_t	p_strlen(const char *str)
-{
-	size_t	len;
-
-	if (str == NULL)
-		return (0);
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}
 
 char	*ft_strdup(const char *src)
 {
@@ -38,7 +25,7 @@ char	*ft_strdup(const char *src)
 			return (NULL);
 		return (dub);
 	}
-	len = p_strlen(src);
+	len = ft_strlen(src);
 	dub = (char *)ft_calloc(len + 1, sizeof(char));
 	if (dub == NULL)
 	{

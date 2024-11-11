@@ -12,20 +12,6 @@
 
 #include "libft.h"
 
-static size_t	p_strlen(const char *str)
-{
-	size_t	len;
-
-	if (str == NULL)
-		return (0);
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
-	return (len);
-}
-
 static char	*allocate_and_copy(const char *src, size_t len)
 {
 	char	*result;
@@ -45,11 +31,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 && !s2)
 		return ((char *)ft_calloc(1, sizeof(char)));
 	if (!s1)
-		return (allocate_and_copy(s2, p_strlen(s2)));
+		return (allocate_and_copy(s2, ft_strlen(s2)));
 	if (!s2)
-		return (allocate_and_copy(s1, p_strlen(s1)));
-	s1_len = p_strlen(s1);
-	s2_len = p_strlen(s2);
+		return (allocate_and_copy(s1, ft_strlen(s1)));
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
 	str_result = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char));
 	if (!str_result)
 		return (NULL);
