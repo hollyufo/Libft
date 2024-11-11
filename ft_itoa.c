@@ -39,8 +39,6 @@ static void	fill_number_str(char *str, long long num, int len)
 		str[--len] = (num % 10) + '0';
 		num /= 10;
 	}
-	if (len == 1)
-		str[0] = '0';
 }
 
 char	*ft_itoa(int n)
